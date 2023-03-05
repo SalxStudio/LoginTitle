@@ -1,0 +1,5 @@
+name: LoginTitle
+version: 1.0
+main: com.imzcc.plugins.LoginTitle
+author: IMZCC
+api-version: 1.17

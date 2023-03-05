@@ -1,0 +1,11 @@
+welcome:
+  # 单位秒
+  waiting: 2
+  prefix:
+    text: "欢迎登录："
+    color: "white"
+  serverName:
+    color: "red"
+  subTitle:
+    text: ""
+    color: ""
