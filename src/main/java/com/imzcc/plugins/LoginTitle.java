@@ -49,10 +49,10 @@ public class LoginTitle extends Plugin implements Listener {
     @EventHandler
     public void onServerConnect(ServerConnectEvent event) {
         ProxiedPlayer player = event.getPlayer();
-        String targetServerName = event.getTarget().getName();
         ProxyServer.getInstance().getScheduler().schedule(this, () -> {
+            String currentServerName = player.getServer().getInfo().getName();
             Title title = ProxyServer.getInstance().createTitle();
-            title.title(new TextComponent(Config.prefixChatColor + Config.prefixText + Config.serverNameChatColor + targetServerName));
+            title.title(new TextComponent(Config.prefixChatColor + Config.prefixText + Config.serverNameChatColor + currentServerName));
             title.subTitle(new TextComponent(Config.subTitleChatColor + Config.subTitleText));
             player.sendTitle(title);
         }, Config.waiting, TimeUnit.SECONDS);
